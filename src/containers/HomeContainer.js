@@ -136,7 +136,15 @@ export default class Home extends React.Component {
                   <h2 {...titles}>MES PROJETS</h2>
                 </ScrollableAnchor>
                 <div>
-                  <p>Moveet</p>
+                  <h3>Moveet 04/2017 - 05/2017</h3>
+                  <p>
+                    Moveet est une application sur laquelle j'ai travaillé seul et qui m'a pris 2 mois à développer. Il s'agit d'un MVP d'une application que j'ai toujours voulu avoir et qui n'existe pas sous cette forme, qui permet de trouver des buddies pour aller voir des films et chatter avec eux. Moveet a pour vocation de permettre à tous de vivre pleinement leur cinéphilie plutôt que d'aller voir des films qu'ils n'ont pas envie de voir... pour suivre leurs potes.
+                    Pour le code c'est ici pour le front et là pour le back.
+                    <br />
+                    {" "}
+                    NB: les gifs sont sur le repo du front.
+                    NB2: j'aimerai lancer cette application en BETA, contactez-moi si vous êtes intéressé !
+                  </p>
                   <Carousel>
                     <img
                       src="http://placehold.it/1000x400/ffffff/c0392b/&amp;text=slide1"
@@ -158,7 +166,31 @@ export default class Home extends React.Component {
                     />
                   </Carousel>
 
-                  <p>Albert</p>
+                  <h3>Albert</h3>
+                  <p>
+                    Albert est une application que nous avons créée à 4 lors de la formation du Reacteur. Albert est une application lifestyle qui permet aux utilisateurs de trouver des événements et des lieux en fonction de ses envies et autour de 8 univers. Ma part de réalisation dans ce projet a été 60% sur le back-end avec mongoDB, Express et 40% sur le front-end en React Native. Pour voir le code source c'est ici pour le front et là pour le back.
+                  </p>
+                  <Carousel>
+
+                    <img
+                      src="http://placehold.it/1000x400/ffffff/c0392b/&amp;text=slide1"
+                    />
+                    <img
+                      src="http://placehold.it/1000x400/ffffff/c0392b/&amp;text=slide2"
+                    />
+                    <img
+                      src="http://placehold.it/1000x400/ffffff/c0392b/&amp;text=slide3"
+                    />
+                    <img
+                      src="http://placehold.it/1000x400/ffffff/c0392b/&amp;text=slide4"
+                    />
+                    <img
+                      src="http://placehold.it/1000x400/ffffff/c0392b/&amp;text=slide5"
+                    />
+                    <img
+                      src="http://placehold.it/1000x400/ffffff/c0392b/&amp;text=slide6"
+                    />
+                  </Carousel>
                 </div>
               </StickyContainer>
             </div>
