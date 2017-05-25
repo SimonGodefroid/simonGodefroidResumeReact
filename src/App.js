@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Router, Route, IndexRoute, browserHistory } from "react-router";
+import Layout from "./Layout";
+import HomeContainer from "./containers/HomeContainer";
+import ContactContainer from "./containers/ContactContainer";
+import NotFoundContainer from "./containers/NotFoundContainer";
 
-class App extends Component {
+export default class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router history={browserHistory}>
+        <Route path="/" component={Layout}>
+          <IndexRoute component={HomeContainer} />
+          <Route path="contact" component={ContactContainer} />
+          <Route path="*" component={NotFoundContainer} />
+        </Route>
+      </Router>
     );
   }
 }
-
-export default App;
