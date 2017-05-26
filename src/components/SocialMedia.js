@@ -3,6 +3,7 @@ import GitHub from "react-icons/lib/fa/github-alt";
 import Phone from "react-icons/lib/fa/phone";
 import Skype from "react-icons/lib/fa/skype";
 import Mail from "react-icons/lib/md/mail-outline";
+import MapMarker from "react-icons/lib/fa/map-marker";
 import { css } from "glamor";
 
 let icons = css({
@@ -34,9 +35,12 @@ export default class SocialMedia extends React.Component {
   render() {
     return (
       <div
-      //  onMouseEnter={() => {
-      //  this.setState({ color: "red" }), console.log(this.state.color);
-      //}}
+      // onMouseEnter={() => {
+      //   this.setState({ color: "red" }), console.log(this.state.color);
+      // }}
+      // onMouseLeave={() => {
+      //   this.setState({ color: "pink" }), console.log(this.state.color);
+      // }}
       >
         <p>
           <a href={"https://github.com/SimonGodefroid/"}>
@@ -56,6 +60,9 @@ export default class SocialMedia extends React.Component {
           </a>
           <a href={"skype:simon.godefroid?chat"}>
             <Skype size={50} {...icons} {...zoom} />
+          </a>
+          <a href={"#map"}>
+            <MapMarker size={50} {...icons} {...zoom} />
           </a>
         </p>
       </div>

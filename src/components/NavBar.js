@@ -29,7 +29,8 @@ let linkElement = css({
 });
 
 let navBar = css({
-  backgroundColor: "white",
+  backgroundColor: "blue",
+  zIndex: 100,
   textAlign: "center",
   padding: "40px 0",
 
@@ -73,6 +74,11 @@ export default class NavBar extends React.Component {
         <li {...liElement}>
           <a href="#resume" {...linkElement}>
             MON CV
+          </a>
+        </li>
+        <li {...liElement}>
+          <a href="#resume" {...linkElement}>
+            A PROPOS DU SITE
           </a>
         </li>
       </ul>

@@ -73,7 +73,7 @@ let imageHolder = css({
 export default class Layout extends React.Component {
   render() {
     return (
-      <div style={{ fontFamily: "Circular" }}>
+      <div style={{ fontFamily: "Open Sans Condensed, Sans-serif" }}>
         <div {...backgroundHero} />
         <div {...overlayHero}>
           <div {...socialMediaBar}>
@@ -93,7 +93,11 @@ export default class Layout extends React.Component {
             </p>
           </div>
           <div {...imageHolder}>
-            <img src="./assets/img/simongodefroid.png" {...imageLanding} alt="Simon GODEFROID"/>
+            <img
+              src="./assets/img/simongodefroid.png"
+              {...imageLanding}
+              alt="Simon GODEFROID"
+            />
           </div>
 
         </div>
