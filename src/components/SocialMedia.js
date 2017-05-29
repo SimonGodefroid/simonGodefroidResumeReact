@@ -12,7 +12,7 @@ let icons = css({
   borderRadius: 25,
   color: "white",
   ":hover": {
-    color: "black"
+    color: "rgb(123,104,238)"
   },
   "@media(max-width: 698px)": {
     margin: "0 5px"
@@ -25,44 +25,25 @@ let zoom = css({
 });
 
 export default class SocialMedia extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: ""
-    };
-  }
-
   render() {
     return (
-      <div
-      // onMouseEnter={() => {
-      //   this.setState({ color: "red" }), console.log(this.state.color);
-      // }}
-      // onMouseLeave={() => {
-      //   this.setState({ color: "pink" }), console.log(this.state.color);
-      // }}
-      >
+      <div>
         <p>
           <a href={"https://github.com/SimonGodefroid/"}>
             {" "}
-            <GitHub
-              size={50}
-              {...icons}
-              {...zoom}
-              style={{ color: this.state.color }}
-            />
+            <GitHub size={this.props.size} {...icons} {...zoom} />
           </a>
           <a href={"mailto:simon.godefroid@gmail.com"}>
-            <Mail size={50} {...icons} {...zoom} />
+            <Mail size={this.props.size} {...icons} {...zoom} />
           </a>
           <a href={"tel:+33650635085"}>
-            <Phone size={50} {...icons} {...zoom} />
+            <Phone size={this.props.size} {...icons} {...zoom} />
           </a>
           <a href={"skype:simon.godefroid?chat"}>
-            <Skype size={50} {...icons} {...zoom} />
+            <Skype size={this.props.size} {...icons} {...zoom} />
           </a>
           <a href={"#map"}>
-            <MapMarker size={50} {...icons} {...zoom} />
+            <MapMarker size={this.props.size} {...icons} {...zoom} />
           </a>
         </p>
       </div>

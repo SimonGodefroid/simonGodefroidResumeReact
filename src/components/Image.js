@@ -15,7 +15,9 @@ export default class Image extends React.Component {
       <img
         src={this.props.source}
         style={{
-          height: window.innerWidth <= 698 ? "" : this.props.height,
+          height: window.innerWidth <= 698
+            ? this.props.maxHeight
+            : this.props.height,
           width: this.props.width,
           padding: this.props.padding
         }}

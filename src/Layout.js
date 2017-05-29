@@ -1,7 +1,8 @@
 import React from "react";
 //import Global from "./Global";
 import SocialMedia from "./components/SocialMedia";
-
+import DownloadResume from "./components/DownloadResume";
+import ScrollableAnchor from "react-scrollable-anchor";
 import { css } from "glamor";
 
 let backgroundHero = css({
@@ -17,7 +18,8 @@ let backgroundHero = css({
 });
 let overlayHero = css({
   height: 300,
-  backgroundColor: "rgba(107,232,144,0.5)",
+  //backgroundColor: "rgba(107,232,144,0.5)",
+  backgroundColor: "rgba(0,0,0,0.5)",
   position: "absolute",
   top: 0,
   width: "100%",
@@ -31,6 +33,15 @@ let socialMediaBar = css({
   margin: "30px 0 0 30px",
   "@media(max-width: 698px)": {
     textAlign: "center"
+  }
+});
+
+let downloadResumeButton = css({
+  position: "absolute",
+  top: 30,
+  right: 30,
+  "@media(max-width: 698px)": {
+    display: "none"
   }
 });
 
@@ -74,21 +85,22 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div style={{ fontFamily: "Open Sans Condensed, Sans-serif" }}>
+        <ScrollableAnchor id={"newTop"}><div /></ScrollableAnchor>
         <div {...backgroundHero} />
         <div {...overlayHero}>
           <div {...socialMediaBar}>
-            <SocialMedia />
+            <SocialMedia size={50} />
           </div>
+          <div {...downloadResumeButton}><DownloadResume size={50} /></div>
           <div {...headerText}>
 
             <h1 {...heroText}>
               SIMON GODEFROID
             </h1>
             <p {...descText}>
-              Web and Mobile Full-Stack JavaScript Developper
-
+              RECHERCHE START UP POUR REJOINDRE UNE ÉQUIPE DE DEVS !!!<br />
+              Web and Mobile Full-Stack JavaScript Developper ReactJS & React Native
               <br />
-
               Movie Maniac
             </p>
           </div>
