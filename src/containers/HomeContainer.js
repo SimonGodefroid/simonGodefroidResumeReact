@@ -108,7 +108,7 @@ export default class Home extends React.Component {
                     marginTop: 30,
                     marginBottom: 100,
                     background: "rgba(255,241,216,0.2)",
-                    padding: "0 30px",
+                    // padding: "0 30px",
                     width: "100%"
                   }}
                 >
