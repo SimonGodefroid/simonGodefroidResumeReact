@@ -20,7 +20,7 @@ export default class ResponsiveCarousel extends Component {
 
           <div>
 
-            <img src="/assets/img/moveet_landing.jpg" />
+            <img src="/assets/img/1_moveet_landing.jpg" />
             <p
               className="legend"
               style={{
@@ -32,7 +32,7 @@ export default class ResponsiveCarousel extends Component {
             </p>
           </div>
           <div>
-            <img src="/assets/img/moveet_results.jpg" />
+            <img src="/assets/img/2_moveet_results.jpg" />
             <p
               className="legend"
               style={{
@@ -45,7 +45,7 @@ export default class ResponsiveCarousel extends Component {
 
           </div>
           <div>
-            <img src="/assets/img/moveet_results.jpg" />
+            <img src="/assets/img/3_moveet_movie.jpg" />
             <p
               className="legend"
               style={{
@@ -59,7 +59,7 @@ export default class ResponsiveCarousel extends Component {
 
           </div>
           <div>
-            <img src="/assets/img/moveet_results.jpg" />
+            <img src="/assets/img/4_moveet_showtimes.jpg" />
             <p
               className="legend"
               style={{
@@ -73,7 +73,49 @@ export default class ResponsiveCarousel extends Component {
 
           </div>
           <div>
-            <img src="/assets/img/moveet_results.jpg" />
+            <img src="/assets/img/5_moveet_buddyfinder.jpg" />
+            <p
+              className="legend"
+              style={{
+                color: "white",
+                fontSize: window.innderWidth <= 698 ? "20px" : "30px"
+              }}
+            >
+              Parcourez les sorties et les films à venir
+
+            </p>
+
+          </div>
+          <div>
+            <img src="/assets/img/6_moveet_swiper.jpg" />
+            <p
+              className="legend"
+              style={{
+                color: "white",
+                fontSize: window.innderWidth <= 698 ? "20px" : "30px"
+              }}
+            >
+              Parcourez les sorties et les films à venir
+
+            </p>
+
+          </div>
+          <div>
+            <img src="/assets/img/7_moveet_swiper_yes.jpg" />
+            <p
+              className="legend"
+              style={{
+                color: "white",
+                fontSize: window.innderWidth <= 698 ? "20px" : "30px"
+              }}
+            >
+              Parcourez les sorties et les films à venir
+
+            </p>
+
+          </div>
+          <div>
+            <img src="/assets/img/7_moveet_swiper_yes.jpg" />
             <p
               className="legend"
               style={{

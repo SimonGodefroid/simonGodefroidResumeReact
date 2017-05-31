@@ -16,6 +16,9 @@ let icons = css({
   },
   "@media(max-width: 698px)": {
     margin: "0 5px"
+  },
+  "@media screen and (device-width: 320px) and (device-height: 568px)": {
+    margin: "0px"
   }
 });
 
