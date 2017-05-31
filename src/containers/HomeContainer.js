@@ -17,7 +17,8 @@ import IHeartCode from "../components/IHeartCode";
 configureAnchors({ offset: -78, scrollDuration: 300 });
 let containerJs = css({
   paddingTop: 60,
-  color: "black"
+  color: "black",
+  backgroundColor: "blue"
 });
 let projectTitle = css({
   margin: "10px",
@@ -55,6 +56,12 @@ let card = css({
     marginBottom: "0px"
   }
 });
+// let carousel = css({
+//   margin: "20px",
+//   "@media(max-width: 698px)": {
+//     margin: "auto"
+//   }
+// });
 
 //let stackImages = css({});
 
@@ -88,7 +95,6 @@ export default class Home extends React.Component {
     return (
       <div>
         <div
-          className={"container"}
           style={{
             fontFamily: "Open Sans Condensed, Circular,Sans-serif"
           }}
@@ -102,7 +108,8 @@ export default class Home extends React.Component {
                     marginTop: 30,
                     marginBottom: 100,
                     background: "rgba(255,241,216,0.2)",
-                    padding: "0 30px"
+                    padding: "0 30px",
+                    width: "100%"
                   }}
                 >
                   <Sticky>
@@ -218,7 +225,7 @@ export default class Home extends React.Component {
                   </ScrollableAnchor>
                   <div {...card}>
                     <div>
-                      <div className={"project"} {...card}>
+                      <div className={"project"}>
                         <h3 {...projectTitle}>Moveet 04/2017 - 05/2017</h3>
                         <p {...paragraphs}>
                           Moveet est une application sur laquelle j'ai travaillé seul et qui m'a pris 2 mois à développer. Il s'agit d'un MVP d'une application que j'ai toujours voulu avoir et qui n'existe pas sous cette forme. Moveet permet de se constituer un pipeline de films et de trouver des buddies pour aller voir des films et chatter avec eux. Moveet a pour vocation de permettre à tous de vivre pleinement leur cinéphilie plutôt que d'aller voir des films qu'ils n'ont pas envie de voir... pour suivre leurs potes.
@@ -266,8 +273,9 @@ export default class Home extends React.Component {
                           {" "}
                           pour présenter l'application.
                         </p>
-                        <ResponsiveCarousel />
-
+                        <div>
+                          <ResponsiveCarousel />
+                        </div>
                       </div>
                     </div>
                     <div>

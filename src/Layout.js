@@ -32,10 +32,8 @@ let overlayHero = css({
 let socialMediaBar = css({
   margin: "30px 0 0 30px",
   "@media(max-width: 698px)": {
-    textAlign: "center"
-  },
-  "@media screen and (device-width: 320px) and (device-height: 568px)": {
     textAlign: "center",
+    border: "2px solid red",
     margin: "30px 0 0 0"
   }
 });
