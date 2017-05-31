@@ -184,7 +184,7 @@ export default class Home extends React.Component {
                       <Image
                         source={"./assets/img/mongo.png"}
                         height={100}
-                        maxHeight={70}
+                        maxHeight={60}
                         padding={"10px 20px"}
                       />
                       <Image
@@ -196,7 +196,7 @@ export default class Home extends React.Component {
                       <Image
                         source={"./assets/img/react native.png"}
                         height={100}
-                        maxHeight={60}
+                        maxHeight={50}
                         padding={"10px 20px"}
                       />
                       <Image
