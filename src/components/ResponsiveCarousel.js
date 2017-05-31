@@ -15,7 +15,6 @@ export default class ResponsiveCarousel extends Component {
           infiniteLoop
           emulateTouch
           width={window.innerWidth <= 698 ? "200px" : "500px"}
-          style={{ marginLeft: "100px" }}
         >
 
           <div>

@@ -41,7 +41,7 @@ let navBar = css({
   "@media(max-width: 698px)": {
     paddingTop: "10px",
     height: "80px",
-    //width: "220px",
+    width: "100%",
     //margin: "auto",
     borderBottomLeftRadius: "20px",
     borderBottomRightRadius: "20px"
