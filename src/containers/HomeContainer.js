@@ -51,7 +51,7 @@ let card = css({
   marginBottom: "20px",
   "@media(max-width: 698px)": {
     textAlign: "center",
-    paddingTop: "20px",
+    padding: "20px 0 0 0 ",
     marginBottom: "0px"
   }
 });
