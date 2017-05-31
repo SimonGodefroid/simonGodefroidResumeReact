@@ -7,7 +7,7 @@ import { css } from "glamor";
 
 let backgroundHero = css({
   backgroundImage: "url('./assets/img/pexels-photo.jpg')",
-  backgroundRepeat: "cover",
+  backgroundRepeat: "no-repeat",
   height: 300,
   backgroundSize: "100vw",
   "@media(max-width: 698px)": {
@@ -32,6 +32,9 @@ let overlayHero = css({
 let socialMediaBar = css({
   margin: "30px 0 0 30px",
   "@media(max-width: 698px)": {
+    textAlign: "center"
+  },
+  "@media screen and (device-width: 320px) and (device-height: 568px)": {
     textAlign: "center"
   }
 });
