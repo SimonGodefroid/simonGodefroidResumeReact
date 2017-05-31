@@ -96,7 +96,7 @@ export default class Home extends React.Component {
           <ScrollableAnchor id={"whoiam"}><div /></ScrollableAnchor>
           <div className={"row"}>
             <div className={"col-lg-12 col-md-12 col-xs-12"} {...containerJs}>
-              <div className={"resume"}>
+              <div>
                 <StickyContainer
                   style={{
                     marginTop: 30,
@@ -218,9 +218,9 @@ export default class Home extends React.Component {
                   </ScrollableAnchor>
                   <div {...card}>
                     <div>
-                      <div className={"project"}>
+                      <div className={"project"} {...card}>
                         <h3 {...projectTitle}>Moveet 04/2017 - 05/2017</h3>
-                        <p>
+                        <p {...paragraphs}>
                           Moveet est une application sur laquelle j'ai travaillé seul et qui m'a pris 2 mois à développer. Il s'agit d'un MVP d'une application que j'ai toujours voulu avoir et qui n'existe pas sous cette forme. Moveet permet de se constituer un pipeline de films et de trouver des buddies pour aller voir des films et chatter avec eux. Moveet a pour vocation de permettre à tous de vivre pleinement leur cinéphilie plutôt que d'aller voir des films qu'ils n'ont pas envie de voir... pour suivre leurs potes.
                           Pour le code c'est
                           {" "}
@@ -241,7 +241,7 @@ export default class Home extends React.Component {
                           {" "}
                           pour le back.
                         </p>
-                        <p>
+                        <p {...paragraphs}>
                           FEATURES:
                           <br />- Films à l'affiche
                           <br />- Chat
@@ -250,7 +250,7 @@ export default class Home extends React.Component {
                           <br />- Movies Swiper
                           <br />- Movies Matching
                         </p>
-                        <p style={{ marginTop: 10 }}>
+                        <p style={{ marginTop: 10 }} {...paragraphs}>
                           {" "}
                           NB: les gifs sont sur le repo du front.
                           <br />
@@ -273,7 +273,7 @@ export default class Home extends React.Component {
                     <div>
                       <div className={"project"}>
                         <h3 {...projectTitle}>Albert 03/2017</h3>
-                        <p>
+                        <p {...paragraphs}>
                           Albert est une application que nous avons créée à 4 lors de la formation du Reacteur. Albert est une application lifestyle qui permet aux utilisateurs de trouver des événements et des lieux en fonction de ses envies et autour de 8 univers. Ma part de réalisation dans ce projet a été 60% sur le back-end avec mongoDB, Express et 40% sur le front-end en React Native. Pour voir le code source c'est ici pour le front et là pour le back.
                         </p>
                         <ResponsiveCarousel />
@@ -297,7 +297,7 @@ export default class Home extends React.Component {
                   </ScrollableAnchor>
                   <div {...card}>
 
-                    <p>
+                    <p {...paragraphs}>
                       J'ai construit ce site en React afin de m'exercer à utiliser de nouveaux composants et packages. Parmi ceux-ci:
                     </p>
                     <ul>

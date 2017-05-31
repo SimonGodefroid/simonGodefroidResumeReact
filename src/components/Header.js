@@ -8,8 +8,7 @@ export default class Header extends React.Component {
       <div
         style={{
           ...this.props.style,
-          zIndex: 1000,
-          width: 200
+          zIndex: 1000
         }}
       >
         <NavBar />
