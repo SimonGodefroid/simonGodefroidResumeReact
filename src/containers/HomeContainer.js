@@ -56,14 +56,6 @@ let card = css({
     marginBottom: "0px"
   }
 });
-// let carousel = css({
-//   margin: "20px",
-//   "@media(max-width: 698px)": {
-//     margin: "auto"
-//   }
-// });
-
-//let stackImages = css({});
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -100,7 +92,7 @@ export default class Home extends React.Component {
           }}
         >
           <ScrollableAnchor id={"whoiam"}><div /></ScrollableAnchor>
-          <div className={"row"}>
+          <div className={"row"} style={{ margin: 0 }}>
             <div className={"col-lg-12 col-md-12 col-xs-12"} {...containerJs}>
               <div>
                 <StickyContainer
