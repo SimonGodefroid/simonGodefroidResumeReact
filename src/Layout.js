@@ -36,7 +36,7 @@ let socialMediaBar = css({
   },
   "@media screen and (device-width: 320px) and (device-height: 568px)": {
     textAlign: "center",
-    marginTop: "30px"
+    margin: "30px 0 0 0"
   }
 });
 

@@ -202,7 +202,7 @@ export default class Home extends React.Component {
                       <Image
                         source={"./assets/img/react.png"}
                         height={100}
-                        maxHeight={60}
+                        maxHeight={50}
                         padding={"10px 20px"}
                       />
 
