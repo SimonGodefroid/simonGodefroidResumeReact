@@ -2,23 +2,24 @@ import React from "react";
 import { StickyContainer, Sticky } from "react-sticky";
 import ScrollableAnchor from "react-scrollable-anchor";
 import Header from "../components/Header.js";
-import Image from "../components/Image.js";
 import ResponsiveCarousel from "../components/ResponsiveCarousel";
+import ToolBelt from "../components/Toolbelt.js";
 import BackToTop from "../components/BackToTop.js";
 import { css } from "glamor";
 import MyMap from "../components/MyMap";
 import TabsComponent from "../components/TabsComponent";
+import Stack from "../components/Stack";
 import { configureAnchors } from "react-scrollable-anchor";
-import SocialMedia from "../components/SocialMedia";
-import IHeartCode from "../components/IHeartCode";
+//import IHeartCode from "../components/IHeartCode";
 
 // Offset all anchors by -60 to account for a fixed header
 // and scroll more quickly than the default 400ms
-configureAnchors({ offset: -78, scrollDuration: 300 });
+configureAnchors({ offset: -76, scrollDuration: 300 });
 let containerJs = css({
   paddingTop: 60,
-  color: "black",
-  backgroundColor: "blue"
+  color: "black"
+  //background: "rgba(255,241,216,0.2)"
+  //backgroundColor: "blue"
 });
 let projectTitle = css({
   margin: "10px",
@@ -47,8 +48,10 @@ let titles = css({
 
 let card = css({
   padding: "20px",
-  border: "2px black solid",
+  border: "0.5px black solid",
+  borderRadius: "3px",
   backgroundColor: "white",
+  background: "rgba(255,241,216,0.2)",
   marginBottom: "20px",
   "@media(max-width: 698px)": {
     textAlign: "center",
@@ -99,7 +102,7 @@ export default class Home extends React.Component {
                   style={{
                     marginTop: 30,
                     marginBottom: 100,
-                    background: "rgba(255,241,216,0.2)",
+
                     // padding: "0 30px",
                     width: "100%"
                   }}
@@ -116,12 +119,7 @@ export default class Home extends React.Component {
                       }
                     ) => {
                       console.log({
-                        isSticky,
-                        wasSticky,
-                        style,
-                        distanceFromTop,
-                        distanceFromBottom,
-                        calculatedHeight
+                        distanceFromTop
                       });
                       return <Header style={style} />;
                     }}
@@ -150,66 +148,20 @@ export default class Home extends React.Component {
                     <h2 {...titles}>MON STACK</h2>
                   </ScrollableAnchor>
                   <div {...card}>
-                    <div
-                      style={{
-                        textAlign: "center",
-                        verticalAlign: "top"
-                      }}
-                    >
-                      <Image
-                        source={"./assets/img/html.png"}
-                        height={100}
-                        maxHeight={70}
-                        padding={"10px 20px"}
-                      />
-                      <Image
-                        source={"./assets/img/css.png"}
-                        height={100}
-                        maxHeight={70}
-                        padding={"10px 20px"}
-                      />
-                      <Image
-                        source={"./assets/img/js.png"}
-                        height={100}
-                        maxHeight={70}
-                        padding={"10px 20px"}
-                      />
-                      <Image
-                        source={"./assets/img/express.png"}
-                        height={100}
-                        maxHeight={70}
-                        padding={"10px 20px"}
-                      />
-                      <Image
-                        source={"./assets/img/mongo.png"}
-                        height={100}
-                        maxHeight={60}
-                        padding={"10px 20px"}
-                      />
-                      <Image
-                        source={"./assets/img/nodejs.png"}
-                        height={100}
-                        maxHeight={70}
-                        padding={"10px 20px"}
-                      />
-                      <Image
-                        source={"./assets/img/react native.png"}
-                        height={100}
-                        maxHeight={50}
-                        padding={"10px 20px"}
-                      />
-                      <Image
-                        source={"./assets/img/react.png"}
-                        height={100}
-                        maxHeight={50}
-                        padding={"10px 20px"}
-                      />
-
-                    </div>
+                    <Stack />
                     <div style={{ textAlign: "right" }}>
                       <div style={{ textAlign: "right" }}>
                         {" "}<BackToTop path={"#newTop"} />{" "}
                       </div>
+                    </div>
+                  </div>
+                  <ScrollableAnchor id={"mytoolbelt"}>
+                    <h2 {...titles}>MA TOOLBELT</h2>
+                  </ScrollableAnchor>
+                  <div {...card}>
+                    <ToolBelt />
+                    <div style={{ textAlign: "right" }}>
+                      {" "}<BackToTop path={"#newTop"} />{" "}
                     </div>
                   </div>
                   <ScrollableAnchor id={"myprojects"}>
@@ -265,7 +217,12 @@ export default class Home extends React.Component {
                           {" "}
                           pour présenter l'application.
                         </p>
-                        <div>
+                        <div
+                          style={{
+                            border: "2px solid orange",
+                            padding: "0 auto"
+                          }}
+                        >
                           <ResponsiveCarousel />
                         </div>
                       </div>

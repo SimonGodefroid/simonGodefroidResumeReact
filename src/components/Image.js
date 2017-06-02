@@ -1,5 +1,5 @@
 import React from "react";
-import Dimensions from "react";
+//import Dimensions from "react";
 import { css } from "glamor";
 
 let imageStyle = css({
@@ -21,6 +21,7 @@ export default class Image extends React.Component {
           width: this.props.width,
           padding: this.props.padding
         }}
+        alt={this.props.alt}
         {...imageStyle}
       />
     );

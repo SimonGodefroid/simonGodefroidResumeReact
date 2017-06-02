@@ -7,12 +7,13 @@ import { css } from "glamor";
 
 let backgroundHero = css({
   backgroundImage: "url('./assets/img/pexels-photo.jpg')",
-  backgroundRepeat: "no-repeat",
+  //backgroundRepeat: "no-repeat",
+  //backgroundRepeat: "cover",
   height: 300,
+  zIndex: 1,
   backgroundSize: "100vw",
   "@media(max-width: 698px)": {
-    height: 250
-
+    backgroundSize: "100vh 100vw"
     //width: "100vw"
   }
 });
@@ -24,7 +25,7 @@ let overlayHero = css({
   top: 0,
   width: "100%",
   "@media(max-width: 698px)": {
-    height: 250
+    height: 300
     //width: "100vw"
   }
 });
@@ -33,7 +34,7 @@ let socialMediaBar = css({
   margin: "30px 0 0 30px",
   "@media(max-width: 698px)": {
     textAlign: "center",
-    border: "2px solid red",
+    //border: "2px solid red",
     margin: "30px 0 0 0"
   }
 });
@@ -86,34 +87,43 @@ let imageHolder = css({
 export default class Layout extends React.Component {
   render() {
     return (
-      <div style={{ fontFamily: "Open Sans Condensed, Sans-serif" }}>
-        <ScrollableAnchor id={"newTop"}><div /></ScrollableAnchor>
-        <div {...backgroundHero} />
-        <div {...overlayHero}>
-          <div {...socialMediaBar}>
-            <SocialMedia size={50} />
-          </div>
-          <div {...downloadResumeButton}><DownloadResume size={50} /></div>
-          <div {...headerText}>
+      <div>
+        <div
+          style={{
+            fontFamily: "Open Sans Condensed, Sans-serif",
+            zIndex: 1
+          }}
+        >
+          <ScrollableAnchor id={"newTop"}>
+            <div />
+          </ScrollableAnchor>
+          <div {...backgroundHero} />
+          <div {...overlayHero} style={{ zIndex: 1 }}>
+            <div {...socialMediaBar}>
+              <SocialMedia size={50} />
+            </div>
+            <div {...downloadResumeButton}><DownloadResume size={50} /></div>
+            <div {...headerText}>
 
-            <h1 {...heroText}>
-              SIMON GODEFROID
-            </h1>
-            <p {...descText}>
-              RECHERCHE START UP POUR REJOINDRE UNE ÉQUIPE DE DEVS !!!<br />
-              Web and Mobile Full-Stack JavaScript Developper ReactJS & React Native
-              <br />
-              Movie Maniac
-            </p>
-          </div>
-          <div {...imageHolder}>
-            <img
-              src="./assets/img/simongodefroid.png"
-              {...imageLanding}
-              alt="Simon GODEFROID"
-            />
-          </div>
+              <h1 {...heroText}>
+                SIMON GODEFROID
+              </h1>
+              <p {...descText}>
+                RECHERCHE START UP POUR REJOINDRE UNE ÉQUIPE DE DEVS !!!<br />
+                Web and Mobile Full-Stack JavaScript Developper ReactJS & React Native
+                <br />
+                Movie Maniac
+              </p>
+            </div>
+            <div {...imageHolder}>
+              <img
+                src="./assets/img/simongodefroid.png"
+                {...imageLanding}
+                alt="Simon GODEFROID"
+              />
+            </div>
 
+          </div>
         </div>
         <div>
           {this.props.children}
