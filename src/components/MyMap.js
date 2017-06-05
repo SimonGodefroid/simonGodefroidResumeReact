@@ -23,7 +23,7 @@ const GMap = withGoogleMap(props => (
 export default class Map extends React.Component {
   render() {
     return (
-      <div>
+      <div style={{ marginBottom: "50px", pointerEvents: "none" }}>
         <GMap
           containerElement={
             <div

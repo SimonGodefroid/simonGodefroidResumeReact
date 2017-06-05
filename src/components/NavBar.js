@@ -26,7 +26,7 @@ let linkElement = css({
     color: "green"
   },
   "@media(max-width: 698px)": {
-    padding: "10px 20px",
+    padding: "15px 10px 10px 10px",
     display: "inline-block"
   }
 });
@@ -38,10 +38,9 @@ let navBar = css({
   textAlign: "center",
   padding: "20px 0",
   "@media(max-width: 698px)": {
-    paddingTop: "10px",
+    padding: '2px 2px',
     height: "80px",
     width: "100%",
-    //margin: "auto",
     borderBottomLeftRadius: "20px",
     borderBottomRightRadius: "20px"
   }
@@ -67,6 +66,11 @@ export default class NavBar extends React.Component {
         <li {...liElement}>
           <a href={"#mystack"} {...linkElement}>
             MON STACK
+          </a>
+        </li>
+        <li {...liElement}>
+          <a href={"#mytoolbelt"} {...linkElement}>
+            MA TOOLBELT
           </a>
         </li>
         <li {...liElement}>

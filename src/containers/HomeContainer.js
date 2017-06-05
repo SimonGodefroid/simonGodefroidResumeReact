@@ -9,18 +9,18 @@ import { css } from "glamor";
 import MyMap from "../components/MyMap";
 import TabsComponent from "../components/TabsComponent";
 import Stack from "../components/Stack";
-import { configureAnchors } from "react-scrollable-anchor";
-//import IHeartCode from "../components/IHeartCode";
+import Anchor from "../components/Anchor";
+import Footer from "../components/Footer";
+
 
 // Offset all anchors by -60 to account for a fixed header
 // and scroll more quickly than the default 400ms
-configureAnchors({ offset: -76, scrollDuration: 300 });
+
 let containerJs = css({
   paddingTop: 60,
   color: "black"
-  //background: "rgba(255,241,216,0.2)"
-  //backgroundColor: "blue"
 });
+
 let projectTitle = css({
   margin: "10px",
   fontWeight: 700
@@ -33,18 +33,7 @@ let paragraphs = css({
     textAlign: "justify"
   }
 });
-let titles = css({
-  paddingTop: "0px",
-  fontFamily: "Open Sans Condensed",
-  fontWeight: 700,
-  marginTop: "10px",
-  marginBottom: "10px",
-  "@media(max-width: 698px)": {
-    textAlign: "center",
-    padding: "20px 0",
-    marginBottom: "0px"
-  }
-});
+
 
 let card = css({
   padding: "20px",
@@ -59,6 +48,7 @@ let card = css({
     marginBottom: "0px"
   }
 });
+
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -100,10 +90,7 @@ export default class Home extends React.Component {
               <div>
                 <StickyContainer
                   style={{
-                    marginTop: 30,
-                    marginBottom: 100,
-
-                    // padding: "0 30px",
+                    margin: "30px 0 100px 0",
                     width: "100%"
                   }}
                 >
@@ -124,52 +111,29 @@ export default class Home extends React.Component {
                       return <Header style={style} />;
                     }}
                   </Sticky>
-                  <ScrollableAnchor id={"whoiam"}>
-                    <div style={{ marginTop: "20px" }} />
-                  </ScrollableAnchor>
-                  <h2 {...titles}> QUI SUIS-JE ?</h2>
-
+                  <Anchor path={"whoiam"} title={"QUI SUIS-JE?"} />
                   <div {...card}>
-
                     <p {...paragraphs}>
                       Après une carrière de 4 ans dans le business, deux ans en analyste financier chez General Electric Capital et deux années en Project Manager et Business Development Manager chez Rocket Internet, qui m 'ont vu travailler dans 7 pays d'
                       Asie du Sud - Est et vivre à Singapour, j 'ai décidé d'
                       apprendre à coder afin de redonner un élan à ma carrière, pouvoir coder mes propres MVP et aussi pouvoir élargir mes horizons. J'ai donc suivi 3 mois de formation intensive au Reacteur puis ai développé mon propre MVP sur une application de dating/buddying en rapport au cinéma.
                     </p>
-                    <div style={{ textAlign: "right" }}>
-                      {" "}<BackToTop path={"#newTop"} />{" "}
-                    </div>
+                    <BackToTop />
                   </div>
-
-                  {/*//https://www.hawatel.com/blog/handle-window-resize-in-react
-                  //http://stackoverflow.com/questions/19014250/reactjs-rerender-on-browser-resize
-                */}
-                  <ScrollableAnchor id={"mystack"}>
-                    <h2 {...titles}>MON STACK</h2>
-                  </ScrollableAnchor>
+                  <Anchor path={"mystack"} title={"MON STACK"} />
                   <div {...card}>
                     <Stack />
-                    <div style={{ textAlign: "right" }}>
-                      <div style={{ textAlign: "right" }}>
-                        {" "}<BackToTop path={"#newTop"} />{" "}
-                      </div>
-                    </div>
+                    <BackToTop />
                   </div>
-                  <ScrollableAnchor id={"mytoolbelt"}>
-                    <h2 {...titles}>MA TOOLBELT</h2>
-                  </ScrollableAnchor>
+                  <Anchor path={"mytoolbelt"} title={"MA TOOLBELT"} />
                   <div {...card}>
                     <ToolBelt />
-                    <div style={{ textAlign: "right" }}>
-                      {" "}<BackToTop path={"#newTop"} />{" "}
-                    </div>
+                    <BackToTop />
                   </div>
-                  <ScrollableAnchor id={"myprojects"}>
-                    <h2 {...titles}>MES PROJETS</h2>
-                  </ScrollableAnchor>
+                  <Anchor path={"myprojects"} title={"MES PROJETS"} />
                   <div {...card}>
                     <div>
-                      <div className={"project"}>
+                      <div>
                         <h3 {...projectTitle}>Moveet 04/2017 - 05/2017</h3>
                         <p {...paragraphs}>
                           Moveet est une application sur laquelle j'ai travaillé seul et qui m'a pris 2 mois à développer. Il s'agit d'un MVP d'une application que j'ai toujours voulu avoir et qui n'existe pas sous cette forme. Moveet permet de se constituer un pipeline de films et de trouver des buddies pour aller voir des films et chatter avec eux. Moveet a pour vocation de permettre à tous de vivre pleinement leur cinéphilie plutôt que d'aller voir des films qu'ils n'ont pas envie de voir... pour suivre leurs potes.
@@ -192,21 +156,23 @@ export default class Home extends React.Component {
                           {" "}
                           pour le back.
                         </p>
-                        <p {...paragraphs}>
+                        <div {...paragraphs}>
                           FEATURES:
-                          <br />- Films à l'affiche
-                          <br />- Chat
-                          <br />- Buddy Finder
-                          <br />- Géolocalisation
-                          <br />- Movies Swiper
-                          <br />- Movies Matching
-                        </p>
-                        <p style={{ marginTop: 10 }} {...paragraphs}>
+                          <ul>
+                            <li> # Films à l'affiche</li>
+                            <li> # Chat</li>
+                            <li> # Buddy Finder</li>
+                            <li> # Géolocalisation</li>
+                            <li> # Movies Swiper</li>
+                            <li> # Movies Matching</li>
+                          </ul>
+                        </div>
+                        <p style={{ marginTop: 5 }} {...paragraphs}>
                           {" "}
-                          NB: les gifs sont sur le repo du front.
+                          <span>NB:</span> les gifs sont sur le repo du front.
                           <br />
-                          NB2: je lance l'application en BETA, contactez-moi si vous êtes intéressé !
-                          NB3: j'ai fait une petite présentation Spectacle,
+                          <span>NB2:</span> je lance l'application en BETA, contactez-moi si vous êtes intéressé !<br />
+                          <span>NB3:</span> j'ai fait une petite présentation Spectacle,
                           {" "}
                           <a
                             href="http://fortunate-wish.surge.sh/"
@@ -219,8 +185,7 @@ export default class Home extends React.Component {
                         </p>
                         <div
                           style={{
-                            border: "2px solid orange",
-                            padding: "0 auto"
+                            margin: "0 30px",
                           }}
                         >
                           <ResponsiveCarousel />
@@ -228,32 +193,22 @@ export default class Home extends React.Component {
                       </div>
                     </div>
                     <div>
-                      <div className={"project"}>
+                      <div>
                         <h3 {...projectTitle}>Albert 03/2017</h3>
                         <p {...paragraphs}>
                           Albert est une application que nous avons créée à 4 lors de la formation du Reacteur. Albert est une application lifestyle qui permet aux utilisateurs de trouver des événements et des lieux en fonction de ses envies et autour de 8 univers. Ma part de réalisation dans ce projet a été 60% sur le back-end avec mongoDB, Express et 40% sur le front-end en React Native. Pour voir le code source c'est ici pour le front et là pour le back.
                         </p>
-                        <ResponsiveCarousel />
                       </div>
                     </div>
-                    <div style={{ textAlign: "right" }}>
-                      {" "}<BackToTop path={"#newTop"} />{" "}
-                    </div>
+                    <BackToTop />
                   </div>
-                  <ScrollableAnchor id={"resume"}>
-                    <h2 {...titles}>MON CV</h2>
-                  </ScrollableAnchor>
+                  <Anchor path={"resume"} title={"MON CV"} />
                   <div {...card}>
                     <TabsComponent />
-                    <div style={{ textAlign: "right" }}>
-                      {" "}<BackToTop path={"#newTop"} />{" "}
-                    </div>
+                    <BackToTop />
                   </div>
-                  <ScrollableAnchor id={"about"}>
-                    <h2 {...titles}>À PROPOS DU SITE</h2>
-                  </ScrollableAnchor>
+                  <Anchor path={"about"} title={"À PROPOS DU SITE"} />
                   <div {...card}>
-
                     <p {...paragraphs}>
                       J'ai construit ce site en React afin de m'exercer à utiliser de nouveaux composants et packages. Parmi ceux-ci:
                     </p>
@@ -265,7 +220,7 @@ export default class Home extends React.Component {
                         >
                           Glamor
                         </a>
-                        {" "}
+
                         - pour écrire du styling en js à la CSS
                       </li>
                       <li>
@@ -275,7 +230,7 @@ export default class Home extends React.Component {
                         >
                           React Google Maps
                         </a>
-                        {" "}
+
                         - pour me situer sur une carte
                       </li>
                       <li>
@@ -285,7 +240,7 @@ export default class Home extends React.Component {
                         >
                           React Icons
                         </a>
-                        {" "}
+
                         - pour les icônes Social Media
                       </li>
                       <li>
@@ -296,7 +251,7 @@ export default class Home extends React.Component {
                           React Sticky
                         </a>
                         {" "}
-                        - pour les icônes Social Media
+                        - pour le Sticky Header
                       </li>
                       <li>
                         <a
@@ -306,7 +261,7 @@ export default class Home extends React.Component {
                           React Responsive Carousel
                         </a>
                         {" "}
-                        - pour les screens de Moveet et Albert
+                        - pour les screens de Moveet
                       </li>
                       <li>
                         <a
@@ -319,51 +274,19 @@ export default class Home extends React.Component {
                         - pour les rubiques de mon CV
                       </li>
                     </ul>
-                    <div style={{ textAlign: "right" }}>
-                      {" "}<BackToTop path={"#newTop"} />{" "}
-                    </div>
+                    <BackToTop />
                   </div>
-                  <ScrollableAnchor id={"map"}>
-                    <h2 {...titles}>OÙ ME TROUVER ?</h2>
-                  </ScrollableAnchor>
+                  <Anchor path={"map"} title={"OÙ ME TROUVER ?"} />
                   <div {...card}>
-
-                    <div
-                      style={{ marginBottom: "50px", pointerEvents: "none" }}
-                    >
-                      <MyMap />
-
-                    </div>
-                    <div style={{ textAlign: "right" }}>
-                      {" "}<BackToTop path={"#newTop"} />{" "}
-                    </div>
+                    <MyMap />
+                    <BackToTop />
                   </div>
-
                 </StickyContainer>
               </div>
-
             </div>
-            {/*<IHeartCode size={80} />*/}
           </div>
-
         </div>
-        <div
-          style={{
-            position: "fixed",
-            display: "block",
-            color: "white",
-            width: "100vw",
-            height: "30px",
-            bottom: 0,
-            padding: 10,
-            fontSize: 12,
-            backgroundColor: "black",
-            textAlign: "center"
-          }}
-        >
-          © Simon GODEFROID 2017
-
-        </div>
+        <Footer />
       </div>
     );
   }
