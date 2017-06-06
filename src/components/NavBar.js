@@ -23,7 +23,7 @@ let linkElement = css({
 
   ":focus": {
     textDecorationLine: "none",
-    color: "green"
+    color: "grey"
   },
   "@media(max-width: 698px)": {
     padding: "15px 10px 10px 10px",

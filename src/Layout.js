@@ -6,7 +6,7 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import { css } from "glamor";
 
 let backgroundHero = css({
-  backgroundImage: "url('./assets/img/pexels-photo.jpg')",
+  backgroundImage: "url('./assets/img/pexels-photo_lowq.jpg')",
   //backgroundRepeat: "no-repeat",
   //backgroundRepeat: "cover",
   height: 300,
@@ -117,8 +117,8 @@ export default class Layout extends React.Component {
             </div>
             <div {...imageHolder}>
               <img
-                src="./assets/img/simongodefroid.png"
                 {...imageLanding}
+                src="./assets/img/simongodefroid.png"
                 alt="Simon GODEFROID"
               />
             </div>

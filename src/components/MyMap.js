@@ -21,9 +21,11 @@ const GMap = withGoogleMap(props => (
 ));
 
 export default class Map extends React.Component {
+
+
   render() {
     return (
-      <div style={{ marginBottom: "50px", pointerEvents: "none" }}>
+      <div style={{ marginBottom: "50px", pointerEvents: this.props.pointer === false ? "none" : "" }} >
         <GMap
           containerElement={
             <div
@@ -32,7 +34,6 @@ export default class Map extends React.Component {
                 width: "100%",
                 border: "2px solid black",
                 marginBottom: "50px",
-                disable: "true"
               }}
             />
           }
@@ -44,6 +45,7 @@ export default class Map extends React.Component {
                 borderRadius: "20%",
                 marginBottom: "50px"
               }}
+
             />
           }
           center={markers[0]}
