@@ -57,7 +57,7 @@ const ZALORARoles = [
 const LEREACTEURRoles = [
   {
     date: "04/2017 - Aujourd'hui",
-    title: "Fondateur de Moveet",
+    title: "Developpeur ReactJS / React Native - Fondateur de Moveet",
     missions: [
       "- Developpement de mon MVP en React Native",
       "- Création de slides pour la communication",
@@ -71,6 +71,15 @@ const LEREACTEURRoles = [
       "- Suivi d’une formation de 3 mois en développement (JavaScript, React, React Native",
       "- Réalisation d’un projet de fin de formation en 2 semaines et d’un Projet",
       "- Gestion du Projet de fin de formation"
+    ]
+  },
+  {
+    date: "07/2015 - 12/2016",
+    title: "Side Projects et Reconversion",
+    missions: [
+      "- Suivi de tutoriels HTML/CSS/jQuery",
+      "- Projet de photographie",
+      "- Bénévolat sur projets de cinéma"
     ]
   }
 ];
@@ -95,7 +104,12 @@ export default class Resume extends React.Component {
             employer={"General Electric - Capital Solutions"}
             roles={GERoles}
           />
-          <PieChartSkills dataSource={"ge"} />
+          <PieChartSkills
+            dataSource={"ge"}
+            radarStroke={"black"}
+            radarFill={"rgba(63,107,178,1)"}
+            radarFillOpacity={0.8}
+          />
         </TabPanel>
         {/* ROCKET INTERNET PANEL*/}
         <TabPanel>
@@ -109,7 +123,7 @@ export default class Resume extends React.Component {
             dataSource={"zalora"}
             radarStroke={"black"}
             radarFill={"red"}
-            radarFillOpacity={0.3}
+            radarFillOpacity={0.8}
           />
         </TabPanel>
         {/* LE REACTEUR PANEL*/}
@@ -120,7 +134,12 @@ export default class Resume extends React.Component {
             employer={"Le Reacteur, Moveet, Side Projects"}
             roles={LEREACTEURRoles}
           />
-          <PieChartSkills dataSource={"reacteur"} />
+          <PieChartSkills
+            dataSource={"reacteur"}
+            radarStroke={"black"}
+            radarFill={"rgba(86,89,201,1)"}
+            radarFillOpacity={0.8}
+          />
         </TabPanel>
       </Tabs>
     );

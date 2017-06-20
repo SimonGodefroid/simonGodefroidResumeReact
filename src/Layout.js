@@ -109,11 +109,12 @@ export default class Layout extends React.Component {
                 SIMON GODEFROID
               </h1>
               <p {...descText}>
-                RECHERCHE START UP POUR REJOINDRE UNE ÉQUIPE DE DEVS !!!<br />
-                Web and Mobile Full-Stack JavaScript Developper ReactJS & React
-                Native
+                DEVELOPPEUR REACT JS CHERCHE START UP POUR REJOINDRE UNE ÉQUIPE
+                COOL AVEC UNE BONNE METHODO !!!<br />
+                Developper ReactJS & React
+                Native - Full Stack JS
                 <br />
-                Movie Maniac
+                Grand Cinéphile !
               </p>
             </div>
             <div {...imageHolder}>

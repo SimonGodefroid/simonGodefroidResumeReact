@@ -5,6 +5,7 @@ import ExpItem from "./ExpItem";
 
 let tabContent = css({
   height: "100%",
+  fontWeight: 300,
   "@media(max-width: 698px)": {
     height: "100%",
     textAlign: "left",
