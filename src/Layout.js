@@ -90,7 +90,7 @@ export default class Layout extends React.Component {
       <div>
         <div
           style={{
-            fontFamily: "Open Sans Condensed, Sans-serif",
+            fontFamily: "Open Sans Condensed",
             zIndex: 1
           }}
         >

@@ -4,12 +4,11 @@ import Image from "./Image";
 import ExpItem from "./ExpItem";
 
 let tabContent = css({
-  height: "150px",
+  height: "100%",
   "@media(max-width: 698px)": {
-    height: "100vh",
+    height: "100%",
     textAlign: "left",
-    padding: "10px",
-    lineheight: "220px"
+    padding: "10px"
   }
 });
 
