@@ -6,26 +6,29 @@ let markers = [
   {
     position: {
       lat: 48.822703,
-      lng: 2.347040
+      lng: 2.34704
     }
   }
 ];
 
 // Preloader
-const GMap = withGoogleMap(props => (
-  <GoogleMap defaultZoom={17} defaultCenter={{ lat: 48.822703, lng: 2.347040 }}>
+const GMap = withGoogleMap(props =>
+  <GoogleMap defaultZoom={17} defaultCenter={{ lat: 48.822703, lng: 2.34704 }}>
     {markers.map((marker, index) => {
       return <Marker key={index} {...marker} />;
     })}
   </GoogleMap>
-));
+);
 
 export default class Map extends React.Component {
-
-
   render() {
     return (
-      <div style={{ marginBottom: "50px", pointerEvents: this.props.pointer === false ? "none" : "" }} >
+      <div
+        style={{
+          marginBottom: "50px",
+          pointerEvents: this.props.pointer === false ? "none" : ""
+        }}
+      >
         <GMap
           containerElement={
             <div
@@ -33,7 +36,7 @@ export default class Map extends React.Component {
                 height: "400px",
                 width: "100%",
                 border: "2px solid black",
-                marginBottom: "50px",
+                marginBottom: "50px"
               }}
             />
           }
@@ -45,7 +48,6 @@ export default class Map extends React.Component {
                 borderRadius: "20%",
                 marginBottom: "50px"
               }}
-
             />
           }
           center={markers[0]}

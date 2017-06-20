@@ -110,7 +110,8 @@ export default class Layout extends React.Component {
               </h1>
               <p {...descText}>
                 RECHERCHE START UP POUR REJOINDRE UNE ÉQUIPE DE DEVS !!!<br />
-                Web and Mobile Full-Stack JavaScript Developper ReactJS & React Native
+                Web and Mobile Full-Stack JavaScript Developper ReactJS & React
+                Native
                 <br />
                 Movie Maniac
               </p>
