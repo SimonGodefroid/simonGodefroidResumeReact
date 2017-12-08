@@ -3,7 +3,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Header from '../components/Header.js';
 import ToolBelt from '../components/Toolbelt.js';
-import BackToTop from '../components/BackToTop.js';
+// import BackToTop from '../components/BackToTop.js';
 import { css } from 'glamor';
 import MyMap from '../components/MyMap';
 import Resume from '../components/Resume';
@@ -11,10 +11,10 @@ import Stack from '../components/Stack';
 import Anchor from '../components/Anchor';
 import Footer from '../components/Footer';
 import Teachers from '../components/Teachers';
-import MapButton from '../components/MapButton';
+// import MapButton from '../components/MapButton';
 import Projects from '../components/Projects';
 import About from '../components/About';
-
+import ScrollTop from '../components/ScrollTop';
 // Offset all anchors by -60 to account for a fixed header
 // and scroll more quickly than the default 400ms
 
@@ -53,7 +53,7 @@ export default class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			mapControlActive: false
+			mapControlActive: true
 		};
 
 		this.toggleMap = this.toggleMap.bind(this);
@@ -110,43 +110,37 @@ export default class Home extends React.Component {
 											intensive au Reacteur puis ai développé mon propre MVP sur une application
 											de dating/buddying en rapport au cinéma.
 										</p>
-										<BackToTop />
 									</div>
 									<Anchor path={'mystack'} title={'MON STACK'} />
 									<div {...card}>
 										<Stack />
-										<BackToTop />
 									</div>
 									<Anchor path={'mytoolbelt'} title={'MA TOOLBELT'} />
 									<div {...card}>
 										<ToolBelt />
-										<BackToTop />
 									</div>
 									<Anchor path={'myprojects'} title={'MES PROJETS'} />
 									<div {...card}>
 										<Projects />
-										<BackToTop />
 									</div>
 									<Anchor path={'resume'} title={'MON CV'} />
 									<div {...card}>
 										<Resume />
-										<BackToTop />
 									</div>
 									<Anchor path={'about'} title={'À PROPOS DU SITE'} />
 									<div {...card}>
 										<About />
-										<BackToTop />
 									</div>
 									<Anchor path={'map'} title={'OÙ ME TROUVER ?'} />
 									<div {...card} style={{ position: 'relative' }}>
 										<MyMap pointer={this.state.mapControlActive} />
-										<MapButton
+										{/*<MapButton
 											onClickFn={this.toggleMap}
 											mapControlActive={this.state.mapControlActive}
-										/>
-										<BackToTop />
+										/>*/}
 									</div>
 									<Teachers {...paragraphs} />
+									<ScrollTop />
 								</StickyContainer>
 							</div>
 						</div>

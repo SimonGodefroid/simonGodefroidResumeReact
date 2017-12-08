@@ -83,7 +83,7 @@ const LEREACTEURRoles = [
 		date: '01/2017 - 04/2017',
 		title: 'Formation Developpeur ReactJS / React Native',
 		missions: [
-			'- Suivi d’une formation de 3 mois en développement (JavaScript, React, React Native',
+			'- Suivi d’une formation de 3 mois en développement (JavaScript, React, React Native)',
 			'- Réalisation d’un projet de fin de formation en 2 semaines et d’un Projet',
 			'- Gestion du Projet de fin de formation'
 		]

@@ -2,7 +2,6 @@
  * RESET
 */
 
-
 /* http://meyerweb.com/eric/tools/css/reset/
   v2.0 | 20110126
   License: none (public domain)
@@ -89,13 +88,14 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	/* -webkit-font-smoothing: antialiased; */
+	-moz-osx-font-smoothing: grayscale;
 }
-
 
 /* HTML5 display-role reset for older browsers */
 
@@ -110,36 +110,35 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
 
 body {
-  line-height: 1;
+	line-height: 1;
 }
 
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-
 
 /**
  * IMPORTS
@@ -148,116 +147,108 @@ table {
  */
 
 @font-face {
-  font-family: 'Circular';
-  src: url('../fonts/Circular_Air-Book.eot');
-  /* IE9 Compat Modes */
-  src: url('../fonts/Circular_Air-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/Circular_Air-Book.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/Circular_Air-Book.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../fonts/Circular_Air-Book.svg#svgFontName') format('svg');
-  /* Legacy iOS */
-  font-style: normal;
+	font-family: 'Circular';
+	src: url('../fonts/Circular_Air-Book.eot');
+	/* IE9 Compat Modes */
+	src: url('../fonts/Circular_Air-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circular_Air-Book.woff2') format('woff2'), url('../fonts/Circular_Air-Book.woff') format('woff'),
+		url('../fonts/Circular_Air-Book.svg#svgFontName') format('svg');
+	/* Legacy iOS */
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Circular';
-  src: url('../fonts/Circular_Air-Italic.eot');
-  /* IE9 Compat Modes */
-  src: url('../fonts/Circular_Air-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/Circular_Air-Italic.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/Circular_Air-Italic.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../fonts/Circular_Air-Italic.svg#svgFontName') format('svg');
-  /* Legacy iOS */
-  font-style: italic;
+	font-family: 'Circular';
+	src: url('../fonts/Circular_Air-Italic.eot');
+	/* IE9 Compat Modes */
+	src: url('../fonts/Circular_Air-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circular_Air-Italic.woff2') format('woff2'),
+		url('../fonts/Circular_Air-Italic.woff') format('woff'),
+		url('../fonts/Circular_Air-Italic.svg#svgFontName') format('svg');
+	/* Legacy iOS */
+	font-style: italic;
 }
 
 @font-face {
-  font-family: 'Circular';
-  src: url('../fonts/Circular_Air-Bold.eot');
-  /* IE9 Compat Modes */
-  src: url('../fonts/Circular_Air-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/Circular_Air-Bold.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/Circular_Air-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../fonts/Circular_Air-Bold.svg#svgFontName') format('svg');
-  /* Legacy iOS */
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Circular';
+	src: url('../fonts/Circular_Air-Bold.eot');
+	/* IE9 Compat Modes */
+	src: url('../fonts/Circular_Air-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circular_Air-Bold.woff2') format('woff2'), url('../fonts/Circular_Air-Bold.woff') format('woff'),
+		url('../fonts/Circular_Air-Bold.svg#svgFontName') format('svg');
+	/* Legacy iOS */
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Circular';
-  src: url('../fonts/Circular_Air-Light.eot');
-  /* IE9 Compat Modes */
-  src: url('../fonts/Circular_Air-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/Circular_Air-Light.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/Circular_Air-Light.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../fonts/Circular_Air-Light.svg#svgFontName') format('svg');
-  /* Legacy iOS */
-  font-weight: 200;
-  font-style: normal;
+	font-family: 'Circular';
+	src: url('../fonts/Circular_Air-Light.eot');
+	/* IE9 Compat Modes */
+	src: url('../fonts/Circular_Air-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circular_Air-Light.woff2') format('woff2'), url('../fonts/Circular_Air-Light.woff') format('woff'),
+		url('../fonts/Circular_Air-Light.svg#svgFontName') format('svg');
+	/* Legacy iOS */
+	font-weight: 200;
+	font-style: normal;
 }
-
 
 /**
  * BASE
  */
 
 body {
-  padding-top: 70px;
+	padding-top: 70px;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 input {
-  font-family: 'Circular';
-  font-weight: 200;
+	font-family: 'Circular';
+	font-weight: 200;
 }
-
 
 /**
  * HELPERS
  */
 
-
 /* https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/ */
 
 .truncate {
-  width: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	width: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
-
 
 /**
  * RC SLIDER OVERWRITE
  */
 
 .rc-slider-track {
-  background-color: #ff5a5f !important;
+	background-color: #ff5a5f !important;
 }
 
 .rc-slider-handle {
-  border-color: #ff5a5f !important;
+	border-color: #ff5a5f !important;
 }
 
 .rc-slider-handle:hover {
-  border-color: #ff9494 !important;
+	border-color: #ff9494 !important;
 }
-
 
 /**
  * NUKA CAROUSEL OVERWRITE
  */
 
-.slider-slide>img {
-  height: 100%;
-  margin: 0 auto;
-  width: auto !important;
+.slider-slide > img {
+	height: 100%;
+	margin: 0 auto;
+	width: auto !important;
 }

@@ -1,15 +1,16 @@
 import React from 'react';
-//import Global from "./Global";
+import Global from './Global';
 import SocialMedia from './components/SocialMedia';
 import DownloadResume from './components/DownloadResume';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { css } from 'glamor';
+// import Global from './Global';
 
 let backgroundHero = css({
 	backgroundImage: "url('./assets/img/pexels-photo_lowq.jpg')",
 	//backgroundRepeat: "no-repeat",
 	//backgroundRepeat: "cover",
-	height: 300,
+	height: 400,
 	zIndex: 1,
 	backgroundSize: '100vw',
 	'@media(max-width: 698px)': {
@@ -18,14 +19,14 @@ let backgroundHero = css({
 	}
 });
 let overlayHero = css({
-	height: 300,
+	height: 400,
 	//backgroundColor: "rgba(107,232,144,0.5)",
 	backgroundColor: 'rgba(0,0,0,0.5)',
 	position: 'absolute',
 	top: 0,
 	width: '100%',
 	'@media(max-width: 698px)': {
-		height: 300
+		height: 400
 		//width: "100vw"
 	}
 });
@@ -49,10 +50,11 @@ let downloadResumeButton = css({
 });
 
 let imageLanding = css({
-	borderRadius: 75,
+	borderRadius: 25,
 	border: '4px solid white',
 	height: 150,
 	marginTop: 10,
+	[Global.screenSize.smartphoneEm]: { marginTop: '50px' },
 	'@media(max-width: 698px)': {
 		height: '100px'
 	}
@@ -68,6 +70,9 @@ let heroText = css({
 
 let descText = css({
 	fontSize: 20,
+	maxWidth: 650,
+	display: 'inline-block',
+	margin: '0 10px',
 	'@media(max-width: 698px)': {
 		fontSize: 15
 	}
@@ -108,10 +113,9 @@ export default class Layout extends React.Component {
 						<div {...headerText}>
 							<h1 {...heroText}>SIMON GODEFROID</h1>
 							<p {...descText}>
-								DEVELOPPEUR REACT JS CHERCHE START UP POUR REJOINDRE UNE ÉQUIPE COOL AVEC UNE BONNE
-								METHODO !!!<br />
-								Developper ReactJS & React Native - Full Stack JS
-								<br />
+								Développeur ReactJS & React Native - Full Stack JS <br />DÉVELOPPEUR REACT JS CHERCHE
+								START UP POUR REJOINDRE UNE ÉQUIPE COOL AVEC UNE BONNE METHODO AFIN DE MONTER EN
+								COMPÉTENCES ET DÉVELOPPER UN EXCELLENT PRODUIT<br />
 								Grand Cinéphile !
 							</p>
 						</div>
