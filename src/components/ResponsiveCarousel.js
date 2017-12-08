@@ -67,7 +67,7 @@ let imagesMoveet = [
     legend: "Dénichez les cinémas autour de vous"
   },
   {
-    url: "./assets/img/1_moveet_landing.jpg",
+    url: "./assets/img/moveet_buddiesmap_lowq.jpg",
     alt: "moveet_landing",
     legend: "Rencontrez les passionnés autour de vous"
   },

@@ -11,19 +11,37 @@ export default class Stack extends React.Component {
           verticalAlign: "top"
         }}
       >
-        <Image
-          source={"./assets/img/react_native_logo.png"}
-          height={100}
-          maxHeight={60}
-          padding={"10px 20px"}
-          alt={"react_native_logo"}
-        />
-        <Image
-          source={"./assets/img/react_logo.png"}
-          height={100}
-          maxHeight={80}
-          padding={"10px 30px"}
-        />
+      <Image
+      source={"./assets/img/react_logo.png"}
+      height={100}
+      maxHeight={80}
+      padding={"10px 30px"}
+      />
+      <Image
+      source={"./assets/img/redux_logo.png"}
+      height={100}
+      maxHeight={80}
+      padding={"10px 30px"}
+      />
+      <Image
+      source={"./assets/img/graphql_logo.png"}
+      height={100}
+      maxHeight={80}
+      padding={"10px 30px"}
+      />
+      <Image
+      source={"./assets/img/reduxform_logo.png"}
+      height={100}
+      maxHeight={80}
+      padding={"10px 30px"}
+      />
+      <Image
+        source={"./assets/img/react_native_logo.png"}
+        height={100}
+        maxHeight={60}
+        padding={"10px 20px"}
+        alt={"react_native_logo"}
+      />
         <Image
           source={"./assets/img/html.png"}
           height={100}
