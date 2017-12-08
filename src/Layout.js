@@ -13,8 +13,9 @@ let backgroundHero = css({
 	height: 400,
 	zIndex: 1,
 	backgroundSize: '100vw',
-	'@media(max-width: 698px)': {
-		backgroundSize: '100vh 100vw'
+	[Global.screenSize.smartphoneEm]: {
+		backgroundSize: '100vh 100vw',
+		backgroundRepeat: 'no-repeat'
 		//width: "100vw"
 	}
 });
@@ -25,15 +26,15 @@ let overlayHero = css({
 	position: 'absolute',
 	top: 0,
 	width: '100%',
-	'@media(max-width: 698px)': {
-		height: 400
+	[Global.screenSize.smartphoneEm]: {
+		height: 320
 		//width: "100vw"
 	}
 });
 
 let socialMediaBar = css({
 	margin: '30px 0 0 30px',
-	'@media(max-width: 698px)': {
+	[Global.screenSize.smartphoneEm]: {
 		textAlign: 'center',
 		//border: "2px solid red",
 		margin: '30px 0 0 0'
@@ -44,7 +45,7 @@ let downloadResumeButton = css({
 	position: 'absolute',
 	top: 30,
 	right: 30,
-	'@media(max-width: 698px)': {
+	[Global.screenSize.smartphoneEm]: {
 		display: 'none'
 	}
 });
@@ -54,8 +55,8 @@ let imageLanding = css({
 	border: '4px solid white',
 	height: 150,
 	marginTop: 10,
-	[Global.screenSize.smartphoneEm]: { marginTop: '50px' },
-	'@media(max-width: 698px)': {
+	[Global.screenSize.smartphoneEm]: {
+		marginTop: '50px',
 		height: '100px'
 	}
 });

@@ -55,8 +55,10 @@ export default class About extends React.Component {
 		return (
 			<div>
 				<p {...paragraphs}>
-					J'ai construit ce site en React afin de m'exercer à utiliser de nouveaux composants et packages.
-					Parmi ceux-ci:
+					J'ai construit ce site en React, il y a quelques mois déjà afin de m'exercer à utiliser de nouveaux
+					composants et packages. Le code n'est pas représentatif de mon niveau de compétences actuel mais il
+					témoigne de ma volonté d'apprendre les Best Practices. Parmi les composants utilisés pour ce site on
+					trouve:
 				</p>
 				<ul>{this.renderTools()}</ul>
 				<div style={{ textAlign: 'center' }}>

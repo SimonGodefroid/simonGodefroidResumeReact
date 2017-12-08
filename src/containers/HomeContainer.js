@@ -6,6 +6,7 @@ import ToolBelt from '../components/Toolbelt.js';
 // import BackToTop from '../components/BackToTop.js';
 import { css } from 'glamor';
 import MyMap from '../components/MyMap';
+import Bio from '../components/Bio';
 import Resume from '../components/Resume';
 import Stack from '../components/Stack';
 import Anchor from '../components/Anchor';
@@ -100,20 +101,15 @@ export default class Home extends React.Component {
 									</Sticky>
 									<Anchor path={'whoiam'} title={'QUI SUIS-JE?'} />
 									<div {...card}>
-										<p {...paragraphs}>
-											Après une carrière de 4 ans dans le business, deux ans en analyste financier
-											chez General Electric Capital et deux années en Project Manager et Business
-											Development Manager chez Rocket Internet, qui m 'ont vu travailler dans 7
-											pays d' Asie du Sud - Est et vivre à Singapour, j 'ai décidé d' apprendre à
-											coder afin de redonner un élan à ma carrière, pouvoir coder mes propres MVP
-											et aussi pouvoir élargir mes horizons. J'ai donc suivi 3 mois de formation
-											intensive au Reacteur puis ai développé mon propre MVP sur une application
-											de dating/buddying en rapport au cinéma.
-										</p>
+										<Bio />
 									</div>
 									<Anchor path={'mystack'} title={'MON STACK'} />
 									<div {...card}>
 										<Stack />
+									</div>
+									<Anchor path={'about'} title={'À PROPOS DU SITE'} />
+									<div {...card}>
+										<About />
 									</div>
 									<Anchor path={'mytoolbelt'} title={'MA TOOLBELT'} />
 									<div {...card}>
@@ -126,10 +122,6 @@ export default class Home extends React.Component {
 									<Anchor path={'resume'} title={'MON CV'} />
 									<div {...card}>
 										<Resume />
-									</div>
-									<Anchor path={'about'} title={'À PROPOS DU SITE'} />
-									<div {...card}>
-										<About />
 									</div>
 									<Anchor path={'map'} title={'OÙ ME TROUVER ?'} />
 									<div {...card} style={{ position: 'relative' }}>
