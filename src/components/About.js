@@ -59,6 +59,18 @@ export default class About extends React.Component {
 					Parmi ceux-ci:
 				</p>
 				<ul>{this.renderTools()}</ul>
+				<div style={{ textAlign: 'center' }}>
+					<p {...paragraphs}>
+						J'ai essayé d'utiliser Bootstrap le moins possible donc vous ferez sûrement cette tête là:
+					</p>
+
+					<img src={`./assets/img/trump_giphy.gif`} alt={`orangoutang`} style={{ borderRadius: '20px' }} />
+					<p {...paragraphs}>
+						Mais si je n'avais plus rien à apprendre, ça ne vaudrait pas le coup de m'avoir dans votre
+						équipe. Pour les autres projets avec d'autres librairies (e.g. Redux, ReduxForm, GraphQL,
+						Aphrodite...) promenez-vous sur mon <a href={`https://github.com/SimonGodefroid`}>repo</a>
+					</p>
+				</div>
 			</div>
 		);
 	}
