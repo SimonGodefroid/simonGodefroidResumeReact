@@ -68,7 +68,7 @@ export default class About extends React.Component {
 					<p {...paragraphs}>
 						Mais si je n'avais plus rien à apprendre, ça ne vaudrait pas le coup de m'avoir dans votre
 						équipe. Pour les autres projets avec d'autres librairies (e.g. Redux, ReduxForm, GraphQL,
-						Aphrodite...) promenez-vous sur mon <a href={`https://github.com/SimonGodefroid`}>repo</a>
+						Aphrodite...) promenez-vous sur mon <a href={`https://github.com/SimonGodefroid`}>GitHub</a>
 					</p>
 				</div>
 			</div>
