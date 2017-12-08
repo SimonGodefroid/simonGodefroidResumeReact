@@ -64,7 +64,11 @@ export default class About extends React.Component {
 						J'ai essayé d'utiliser Bootstrap le moins possible donc vous ferez sûrement cette tête là:
 					</p>
 
-					<img src={`./assets/img/trump_giphy.gif`} alt={`orangoutang`} style={{ borderRadius: '20px' }} />
+					<img
+						src={`./assets/img/trump_giphy.gif`}
+						alt={`orangoutang`}
+						style={{ borderRadius: '20px', maxWidth: '80%' }}
+					/>
 					<p {...paragraphs}>
 						Mais si je n'avais plus rien à apprendre, ça ne vaudrait pas le coup de m'avoir dans votre
 						équipe. Pour les autres projets avec d'autres librairies (e.g. Redux, ReduxForm, GraphQL,
