@@ -57,7 +57,7 @@ const ZALORARoles = [
 const LEREACTEURRoles = [
 	{
 		date: "10/2017 - Aujourd'hui",
-		title: 'Developpeur ReactJS-1 mois de formation remise à niveau',
+		title: 'Développeur ReactJS-1 mois de formation remise à niveau',
 		missions: [
 			'- Apprentissage de Redux, GraphQL, Webpack 2 et Server Side Rendering',
 			"- Refacto de l'API de Moveet",
@@ -66,18 +66,14 @@ const LEREACTEURRoles = [
 	},
 	{
 		date: '06/2017 - 10/2017',
-		title: 'Developpeur Full Stack',
-		missions: [
-			'- Developpement de mon MVP en React Native',
-			'- Création de slides pour la communication',
-			'- Recrutement de collaborateurs pour le projet'
-		]
+		title: 'Developpeur Full Stack - Squirrel (Agence Web)',
+		missions: ["- Développement d'un API et de Webservices Node Mongo Express Swagger"]
 	},
 
 	{
 		date: '04/2017 - 06/2017',
 		title: 'Developpeur React Native - Fondateur de Moveet',
-		missions: ['- Developpement de mon MVP en React Native', '- Création de slides pour la communication']
+		missions: ['- Développement de mon POC en React Native', "- Développement d'un API pour l'application"]
 	},
 	{
 		date: '01/2017 - 04/2017',
