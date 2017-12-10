@@ -25,7 +25,7 @@ export default class Projects extends React.Component {
 		return (
 			<div>
 				<div>
-					<h3 {...projectTitle}>Moveet Web App 09/2017 - WIP</h3>
+					<h3 {...projectTitle}>Moveet Web App - WIP - 09/2017-Aujourd'hui</h3>
 					<p {...paragraphs}>
 						J'ai commencé la Web App pour Moveet qui est en work-in-progress pour l'instant. Riche de mon
 						expérience de 4 mois chez Squirrel j'ai pu ré-écrire le code de l'API afin de le rendre plus
@@ -40,12 +40,12 @@ export default class Projects extends React.Component {
 							ici
 						</a>{' '}
 						(elle est hostée sur Heroku alors soyez patients vous venez sûrement de troubler le repos d'une
-						instance en sommeil...). Si c'est le code source qui vous intéresse... c'est par
+						instance en sommeil...). Si c'est le code source qui vous intéresse... c'est par{' '}
 						<a href="https://github.com/SimonGodefroid/moveetReact" target="blank">
 							ici
 						</a>.
 					</p>
-					<h3 {...projectTitle}>Moveet 04/2017 - 05/2017</h3>
+					<h3 {...projectTitle}>Moveet iOs - WIP - 04/2017 - 06/2017</h3>
 					<p {...paragraphs}>
 						Moveet est une application sur laquelle j'ai travaillé seul et qui m'a pris 2 mois à développer.
 						Il s'agit d'un MVP d'une application que j'ai toujours voulu avoir et qui n'existe pas sous
@@ -64,25 +64,25 @@ export default class Projects extends React.Component {
 						pour le back.
 					</p>
 					<div {...paragraphs}>
-						<span {...bold}>FEATURES:</span>
+						<span {...bold}>Fonctionnalités:</span>
 						<ul>
-							<li> # Films à l'affiche</li>
-							<li> # Chat</li>
-							<li> # Buddy Finder</li>
-							<li> # Géolocalisation</li>
-							<li> # Movies Swiper</li>
-							<li> # Movies Matching</li>
+							<li>Films à l'affiche (par genre)</li>
+							<li>Chat</li>
+							<li>Buddy Finder</li>
+							<li>Géolocalisation</li>
+							<li>Movies Swiper</li>
+							<li>Movies Matching</li>
 						</ul>
 					</div>
 					<p {...paragraphs}>
 						<span>NB:</span> les gifs sont sur le repo du front.
 						<br />
 						<span>NB2:</span> je lance l'application en BETA, contactez-moi si vous êtes intéressé !<br />
-						<span>NB3:</span> j'ai fait une petite présentation Spectacle,
+						{/*<span>NB3:</span> j'ai fait une petite présentation Spectacle,
 						<a href="http://fortunate-wish.surge.sh/" target="blank">
 							ici
 						</a>{' '}
-						pour présenter l'application.
+		pour présenter l'application.*/}
 					</p>
 					<div
 						style={{
