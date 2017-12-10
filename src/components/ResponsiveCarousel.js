@@ -9,7 +9,7 @@ let imagesMoveet = [
 	{
 		url: './assets/img/moveet_splash_lowq.jpg',
 		alt: 'moveet_splash',
-		legend: 'Bienvenu sur Moveet'
+		legend: 'Bienvenue sur Moveet'
 	},
 	{
 		url: './assets/img/moveet_landing_lowq.jpg',
